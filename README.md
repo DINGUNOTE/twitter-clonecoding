@@ -6,13 +6,13 @@
 1. `getAuth()`를 사용해서 인스턴스와 연결
    - [getAuth()](https://firebase.google.com/docs/reference/js/auth.md#getauth)
 2. 이메일 & 패스워드를 이용한 회원가입, 로그인
-   - [signInWithCredential(인증, 자격 증명)](https://firebase.google.com/docs/reference/js/auth.md#signinwithemailandpassword) 
+   - [signInWithCredential()](https://firebase.google.com/docs/reference/js/auth.md#signinwithemailandpassword) 
 3. `signInWithPopup()`를 사용해서 팝업 기반 OAuth 인증 흐름으로 Firebase 클라이언트 인증
    - [signInWithPopup()](https://firebase.google.com/docs/reference/js/auth.md?authuser=0#signinwithpopup)
 4. 구글 계정을 이용한 회원가입, 로그인
-   - [GoogleAuthProvider](https://firebase.google.com/docs/auth/web/google-signin)
+   - [GoogleAuthProvider()](https://firebase.google.com/docs/auth/web/google-signin)
 5. 깃헙 계정을 이용한 회원가입, 로그인
-   - [GithubAuthProvider](https://firebase.google.com/docs/auth/web/github-auth)
+   - [GithubAuthProvider()](https://firebase.google.com/docs/auth/web/github-auth)
 6. `signOut()` 메서드를 사용해서 로그아웃 구현
    - [signOut()](https://firebase.google.com/docs/reference/js/auth.md#signout)
 
