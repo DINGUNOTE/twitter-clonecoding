@@ -1,5 +1,5 @@
 ## 📌 Skills
-- Front-end: React, react-router-dom v6
+- Front-end: React, react-router-dom v6, styled-components
 - Back-end: firebase v9(Authentication, Firestore Database(NoSQL DB), Storage)
 
 ## 📌 Authentication
@@ -53,4 +53,6 @@
 
 ## 💡 Refactoring
 - [x] 로그인 여부를 확인하기 위해 사용했던 isLoggedIn state를 없애고, 사용자의 정보를 담아 prop으로 내려주기 위해 사용됐던 userObj를 Boolean으로 사용하면서 불필요한 렌더링을 줄였다.
-- [ ] Home 컴포넌트의 코드 컴포넌트 분리
+- [x] Home 컴포넌트, Auth 컴포넌트 코드 컴포넌트 분리
+
+## 🎨 Styling
