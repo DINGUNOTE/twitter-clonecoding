@@ -48,8 +48,8 @@ const Profile = ({ userObj, refreshUser }) => {
 
   const onLogOut = () => {
     authService.signOut();
-    // authService.currentUser.uid;
     navigate('/');
+    refreshUser();
   };
 
   return (
