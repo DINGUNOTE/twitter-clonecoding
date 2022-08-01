@@ -1,6 +1,7 @@
 ## 📌 Skills
 - Front-end: React, react-router-dom v6, styled-components
 - Back-end: firebase v9(Authentication, Firestore Database(NoSQL DB), Storage)
+- Deploy: GitHub Pages
 
 ## 📌 Authentication
 1. `getAuth()`를 사용해서 인스턴스와 연결
