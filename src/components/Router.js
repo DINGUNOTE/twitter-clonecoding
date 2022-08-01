@@ -12,7 +12,6 @@ import Profile from 'routes/Profile';
 const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
   return (
     <Router>
-      {isLoggedIn && <Navigation userObj={userObj} />}
       <Routes>
         {isLoggedIn ? (
           <>
@@ -29,6 +28,7 @@ const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
           </>
         )}
       </Routes>
+      {isLoggedIn && <Navigation refreshUser={refreshUser} />}
     </Router>
   );
 };

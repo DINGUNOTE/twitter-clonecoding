@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import AppRouter from 'components/Router';
 import { authService } from 'fbase';
 import { updateProfile } from 'firebase/auth';
+import AppRouter from 'components/Router';
+
+import GlobalStyle from 'GlobalStyle';
 
 const App = () => {
   const [init, setInit] = useState(false);
@@ -40,6 +42,7 @@ const App = () => {
 
   return (
     <>
+      <GlobalStyle />
       {init ? (
         <AppRouter
           isLoggedIn={Boolean(userObj)}

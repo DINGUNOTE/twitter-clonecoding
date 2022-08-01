@@ -1,8 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+import { authService } from 'fbase';
 
 const Nav = styled.nav`
   position: fixed;
@@ -20,14 +21,13 @@ const Nav = styled.nav`
     gap: 1rem;
     padding: 0 1rem;
 
-    li a {
+    li a,
+    li button {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       padding: 0.5rem;
-
       color: #979797;
-
       &.on {
         color: #ee6723;
       }
@@ -35,8 +35,22 @@ const Nav = styled.nav`
   }
 `;
 
-const Navigation = () => {
-  console.log(useLocation());
+const CustomButton = styled.button`
+  all: unset;
+  cursor: pointer;
+`;
+
+const Navigation = ({ refreshUser }) => {
+  const navigate = useNavigate();
+
+  const onLogOut = () => {
+    if (window.confirm('Are you going to log out?')) {
+      authService.signOut();
+      navigate('/');
+      refreshUser();
+    }
+  };
+
   return (
     <Nav>
       <ul>
@@ -54,6 +68,12 @@ const Navigation = () => {
             <FontAwesomeIcon icon={faUser} />
             Profile
           </Link>
+        </li>
+        <li>
+          <CustomButton type="button" onClick={onLogOut}>
+            <FontAwesomeIcon icon={faPowerOff} />
+            Logout
+          </CustomButton>
         </li>
       </ul>
     </Nav>

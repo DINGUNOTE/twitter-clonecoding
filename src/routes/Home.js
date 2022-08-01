@@ -4,6 +4,14 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import Nweet from 'components/Nweet';
 import NweetForm from 'components/NweetForm';
 
+import styled from 'styled-components';
+
+const Container = styled.main``;
+
+const NweetList = styled.ul`
+  margin-top: 1rem;
+`;
+
 const Home = ({ userObj }) => {
   const [nweets, setNweets] = useState([]);
   useEffect(() => {
@@ -22,18 +30,19 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <Container>
       <NweetForm userObj={userObj} />
-      <div>
+      <NweetList>
         {nweets.map(nweet => (
           <Nweet
             key={nweet.id}
+            userObj={userObj}
             nweetObj={nweet}
             isOwner={nweet.creatorId === userObj.uid}
           />
         ))}
-      </div>
-    </div>
+      </NweetList>
+    </Container>
   );
 };
 
