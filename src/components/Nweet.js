@@ -61,7 +61,6 @@ const ButtonBox = styled.div`
 `;
 
 const Nweet = ({ nweetObj, isOwner }) => {
-  console.log(nweetObj);
   const [isEdit, setIsEdit] = useState(false);
   const [newNweet, setNewNweet] = useState(nweetObj.text);
   const nweetRef = doc(dbService, 'nweets', `${nweetObj.id}`);

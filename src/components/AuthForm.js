@@ -103,19 +103,13 @@ const AuthForm = () => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      let data;
       if (newAccount) {
         // create account
-        data = await createUserWithEmailAndPassword(
-          authService,
-          email,
-          password,
-        );
+        await createUserWithEmailAndPassword(authService, email, password);
       } else {
         // log in
-        data = await signInWithEmailAndPassword(authService, email, password);
+        await signInWithEmailAndPassword(authService, email, password);
       }
-      console.log(data);
     } catch (error) {
       console.log(error);
       setError(error.message.replace('Firebase: ', ''));
