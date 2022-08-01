@@ -6,7 +6,7 @@
 ```bash
 ├── public                     Static Files
 │   
-├── src
+└── src
     ├── components
     │   ├── App.js
     │   ├── AuthForm.js        로그인 email, password 폼
