@@ -1,3 +1,28 @@
+## 📌 Deploy URL
+- [https://dingunote.github.io/nwitter/](https://dingunote.github.io/nwitter/)
+
+## 📌 File Path
+
+```bash
+├── public                     Static Files
+│   
+├── src
+    ├── components
+    │   ├── App.js
+    │   ├── AuthForm.js        로그인 email, password 폼
+    │   ├── Navigation.js      하단 Home, Profile, Logout 메뉴
+    │   ├── Nweet.js           Nweet List 관리
+    │   ├── NweetForm.js       새 Nweet 등록
+    │   └── Router.js          페이지 라우팅
+    ├── routes
+    │   ├── Auth.js            로그인 Page
+    │   ├── Home.js            메인 Page
+    │   └── Profile.js         프로필 Page
+    ├── fbase.js               firebase 관련 소스
+    ├── GlobalStyle.js         전역 스타일
+    └── index.js
+```
+
 ## 📌 Skills
 - Front-end: React, react-router-dom v6, styled-components
 - Back-end: firebase v9(Authentication, Firestore Database(NoSQL DB), Storage)
