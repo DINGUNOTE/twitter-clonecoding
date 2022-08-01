@@ -49,10 +49,16 @@
 1. 사용자 정보인 `userObj`를 Router 컴포넌트에서 Profile 컴포넌트에도 prop으로 내려주고, 받은 사용자 정보를 바탕으로 fireStore의 `where()`을 사용해서 컬렉션 중 트윗 컬렉션의 uid와 동일한 creatorId를 가진 문서를 받아서 프로필 컴포넌트에 그린다. 
    - [where()](https://firebase.google.com/docs/reference/js/firestore_.md#where)
 2. 사용자의 displayName을 변경하기 위해 `updateProfile()` 사용
-- [updateProfile()](https://firebase.google.com/docs/reference/js/auth?hl=en#updateprofile)
+   - [updateProfile()](https://firebase.google.com/docs/reference/js/auth?hl=en#updateprofile)
 
 ## 💡 Refactoring
 - [x] 로그인 여부를 확인하기 위해 사용했던 isLoggedIn state를 없애고, 사용자의 정보를 담아 prop으로 내려주기 위해 사용됐던 userObj를 Boolean으로 사용하면서 불필요한 렌더링을 줄였다.
 - [x] Home 컴포넌트, Auth 컴포넌트 코드 컴포넌트 분리
 
 ## 🎨 Styling
+- used FontAwesome Icons, styled-components
+
+
+## 🐛 Debugging
+- [x] 추가했던 이미지를 삭제 후 다시 같은 이미지를 등록했을 때 썸네일에 표시가 안됨
+  - 썸네일 삭제 버튼을 눌렀을 때 현재 이미지 state에 담긴 값만 비워줬기 때문에 input file에는 값이 남아있었고, onChange 이벤트로 파일을 받았기 때문에 같은 파일명이 들어오게 되면 이벤트가 다시 실행되지 않는다. => 썸네일 이미지를 삭제했을 때 `useRef()`를 사용해서 input의 value를 비워주도록 수정
