@@ -11,7 +11,7 @@ import Profile from 'routes/Profile';
 
 const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         {isLoggedIn ? (
           <>
