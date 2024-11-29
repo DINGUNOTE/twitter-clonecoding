@@ -1,5 +1,5 @@
 ## 📌 Deploy URL
-- [https://dingunote.github.io/nwitter/](https://dingunote.github.io/nwitter/)
+- [https://zekelee.github.io/nwitter/](https://zekelee.github.io/nwitter/)
 
 ## 📌 File Path
 
